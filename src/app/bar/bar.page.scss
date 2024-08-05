@@ -1,0 +1,20 @@
+.header_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 90px;
+    img{
+        width: 100px;
+        position: absolute;
+        left: 50%;
+        bottom: 60%;
+        transform: translate(-60%);
+    }
+    .btn_div{
+        display: flex;
+    }
+    ion-button{
+        color: black;
+    }
+}

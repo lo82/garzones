@@ -1,0 +1,700 @@
+<ion-header >
+  <div class="header_div" >
+
+  <ion-toolbar>
+    <ion-button size="large" fill="clear" color="sucess" [routerLink]="['/home']">
+    <ion-icon name="arrow-back-circle" size="large"></ion-icon>
+    </ion-button>
+
+    <ion-title><h1>Bar</h1></ion-title>
+
+  </ion-toolbar>
+
+  </div>
+</ion-header>
+
+<ion-content >
+
+    <ion-refresher slot="fixed"  (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+   
+    
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$3.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-modal" expand="full" >$3.000</ion-button>
+     
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$4.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-modals" expand="full" >$4.000</ion-button>
+      
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$5.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-modals1" expand="full" >$5.000</ion-button>
+   
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$10.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda10" expand="full" >$10.000</ion-button>
+      
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$12.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda12" expand="full" >$12.000</ion-button>
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$15.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda15" expand="full" >$15.000</ion-button>
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$18.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda18" expand="full" >$18.000</ion-button>
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$20.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda20" expand="full" >$20.000</ion-button>
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$30.000</th>
+      </tr>
+      </thead>
+
+    
+      <ion-button id="open-moda30" expand="full" >$30.000</ion-button>
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$50.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda50" expand="full" >$50.000</ion-button>
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$60.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda60" expand="full" >$60.000</ion-button>
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$80.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda80" expand="full" >$80.000</ion-button>
+      
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$120.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda120" expand="full" >$120.000</ion-button>
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$150.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda150" expand="full" >$150.000</ion-button>
+    
+  </table>
+
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$180.000</th>
+      </tr>
+      </thead>
+
+      <ion-button id="open-moda180" expand="full" >$180.000</ion-button>
+  </table>
+  <table class="table table-data">
+      <thead>
+      <tr>
+      <th>$800.000</th>
+      </tr>
+      </thead>
+      <ion-button id="open-moda800" expand="full" >$800.000</ion-button>
+  </table>
+
+
+
+</ion-content>
+
+<ion-modal #modal trigger="open-modal">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$3.000</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Cerveza &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="cer">&nbsp;<button class="btn btn-success" (click)="crearCerveza()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Energetica&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="ener">&nbsp;<button class="btn btn-success" (click)="crearEnergetica()">Pagar</button>&nbsp;</td></tr>
+                </tbody>
+            </table>
+           
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modals trigger="open-modals">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modals.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$4.000</th>
+                </tr>
+                </thead>
+              
+                <tbody>
+                    <tr>
+                    <td>Kunstman &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="kunstman">&nbsp;<button class="btn btn-success" (click)="crearkunstman()" >Pagar</button>&nbsp;</td>
+                    </tr>
+            
+                </tbody>
+            </table>
+           
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal1 trigger="open-modals1">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal1.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$5.000</th>
+                </tr>
+                </thead>
+            
+                <tbody>
+                    <tr>
+                    <td>Bebida &nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="bebida">&nbsp;<button class="btn btn-success" (click)="crearBebida()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Tonica&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="tonica">&nbsp;<button class="btn btn-success" (click)="crearTonica()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>Ener &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]='energetica'>&nbsp;<button class="btn btn-success" (click)="crearEnergetica()">Pagar</button>&nbsp;</td>
+                        </tr>
+                        <tr>  <td>Agua&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" [(ngModel)]="agua" min="1" step="1">&nbsp;<button class="btn btn-success" (click)="crearMineral()">Pagar</button>&nbsp;</td></tr>
+                </tbody>
+            </table>
+           
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal10 trigger="open-moda10">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal10.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$10.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Wisky &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="wisky">&nbsp;<button class="btn btn-success" (click)="crearWisk()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Cerveza&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="cerveza">&nbsp;<button class="btn btn-success" (click)="crearCervezas()" >Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>Piscola &nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="piscola">&nbsp;<button class="btn btn-success" (click)="crearPiscola()">Pagar</button>&nbsp;</td>
+                        </tr>
+                        <tr>  <td>Ron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" min="1" step="1" [(ngModel)]="ron" >&nbsp;<button class="btn btn-success" (click)="crearRon()">Pagar</button>&nbsp;</td></tr>
+                        <tr>  <td>Tequila&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="tequila" >&nbsp;<button class="btn btn-success" (click)="crearTequila()">Pagar</button>&nbsp;</td></tr>
+                        <tr>
+                            <td>Cocktel  &nbsp;&nbsp;&nbsp;<input type="number" smin="1" step="1" [(ngModel)]="cocktel" >&nbsp;<button class="btn btn-success" (click)="crearCocktel()">Pagar</button>&nbsp;</td>
+                            </tr>
+                            <tr>  <td>Cigarro&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" min="1" step="1" [(ngModel)]="cigarro" >&nbsp;<button class="btn btn-success" (click)="crearCigarro()">Pagar</button>&nbsp;</td></tr>
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal12 trigger="open-moda12">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal12.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$12.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Vodska&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1"  [(ngModel)]="vodska">&nbsp;<button class="btn btn-success" (click)="crearVodska()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Wisky&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number"  min="1" step="1"[(ngModel)]="wisky">&nbsp;<button class="btn btn-success" (click)="crearWisky()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>Novel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="nobel">&nbsp;<button class="btn btn-success" (click)="crearNovel()">Pagar</button>&nbsp;</td>
+                        </tr>
+                        <tr>  <td>Jager&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" min="1" step="1" [(ngModel)]="jager">&nbsp;<button class="btn btn-success" (click)="crearJager()">Pagar</button>&nbsp;</td></tr>
+                        <tr>  <td>Campary&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="campary">&nbsp;<button class="btn btn-success" (click)="crearCampary()">Pagar</button>&nbsp;</td></tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  
+  <ion-modal #modal15 trigger="open-moda15">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal15.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$15.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Wisky&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="wisky">&nbsp;<button class="btn btn-success" (click)="crearWiskyt()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Baylis&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="beylis">&nbsp;<button class="btn btn-success" (click)="crearBaylis()">Pagar</button>&nbsp;</td></tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal18 trigger="open-moda18">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal18.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$18.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Wisky.B.&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="wiskyB" >&nbsp;<button class="btn btn-success" (click)="crearWiskyB()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Sheridans&nbsp;&nbsp;<input  type="number"  min="1" step="1" [(ngModel)]="sheridans">&nbsp;<button class="btn btn-success" (click)="crearSheridans()">Pagar</button>&nbsp;</td></tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal20 trigger="open-moda20">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal20.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$20.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Wisky Double Black.&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="wiskyDB">&nbsp;<button class="btn btn-success" (click)="crearWSDB()">Pagar</button>&nbsp;</td>
+                    </tr>
+          
+          
+          
+                    </tbody>
+            </table>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  
+  <ion-modal #modal30 trigger="open-moda30">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal30.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$30.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Wisky&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="w">&nbsp;<button class="btn btn-success" (click)="crearW()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Green&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="wiskyG">&nbsp;<button class="btn btn-success" (click)="crearWG()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>Gold&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="wiskyGold">&nbsp;<button class="btn btn-success" (click)="crearWGOLD()">Pagar</button>&nbsp;</td>
+                        </tr>
+                        <tr>  <td>Gentleman Jacks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" min="1" step="1" [(ngModel)]="wiskyGen">&nbsp;<button class="btn btn-success" (click)="crearWGGentleman()">Pagar</button>&nbsp;</td></tr>
+          
+          
+          
+                    </tbody>
+            </table>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal50 trigger="open-moda50">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal50.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$50.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Vinos&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="vino">&nbsp;<button class="btn btn-success" (click)="crearVino()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    </tbody>
+            </table>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal60 trigger="open-moda60">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal60.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$60.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>B.Pisco.Mistral&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]='botellaPM'>&nbsp;<button class="btn btn-success" (click)="crearBotellaM()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>B.Pisco.Alto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]='botellaPA'>&nbsp;<button class="btn btn-success" (click)="crearBotellaA()">Pagar</button>&nbsp;</td></tr>
+                    </tbody>
+            </table>
+           
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal80 trigger="open-moda80">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal80.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$80.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>B.Wisky.Rojo&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="botellaWR">&nbsp;<button class="btn btn-success" (click)="crearBotellaWR()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>B.Pisco.Nobel&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="botellaPN">&nbsp;<button class="btn btn-success" (click)="crearBotellaPN()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>B.Ron&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="botellaR">&nbsp;<button class="btn btn-success" (click)="crearBotellaR()" >Pagar</button>&nbsp;</td>
+                        </tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal120 trigger="open-moda120">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal120.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$120.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>B.JackDaniels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="jackss">&nbsp;<button class="btn btn-success" (click)="crearBotellaJa()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>B.ChivasRegal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="chivass">&nbsp;<button class="btn btn-success" (click)="crearBotellaChivas()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>B.Jonny.Waker.Negro&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="jhonnys">&nbsp;<button class="btn btn-success"  (click)="crearBotellaJhonny()"  >Pagar</button>&nbsp;</td>
+                        </tr>
+                        <tr>  <td>Botella Jager&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  type="number" min="1" step="1" [(ngModel)]="jagers">&nbsp;<button class="btn btn-success" (click)="crearBotellaJager()">Pagar</button>&nbsp;</td></tr>
+                        <tr>  <td>Botella Vodska Absolut&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="vodskas">&nbsp;<button class="btn btn-success" (click)="crearBotellaVodska()">Pagar</button>&nbsp;</td></tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal150 trigger="open-moda150">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal150.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$150.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>B.Jhonny WakerDBLack&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="jhony">&nbsp;<button class="btn btn-success" (click)="crearBotellaJhony()">Pagar</button>&nbsp;</td>
+                    </tr>
+                    </tbody>
+            </table>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal180 trigger="open-moda180">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal180.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$180.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Jhonny Waker Green La&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="jhonnyGr">&nbsp;<button class="btn btn-success" (click)="crearJhonnyGreen()" >Pagar</button>&nbsp;</td>
+                    </tr>
+                    <tr>  <td>Jhonny Waker Gold La&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input  type="number" min="1" step="1" [(ngModel)]="jhonnyGo">&nbsp;<button class="btn btn-success" (click)="crearJhonnyGolden()">Pagar</button>&nbsp;</td></tr>
+                    <tr>
+                        <td>Jacks Daniels Gentleman Jack&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1" [(ngModel)]="jackGen">&nbsp;<button class="btn btn-success" (click)="crearJackGen()" >Pagar</button>&nbsp;</td>
+                        </tr>
+          
+          
+                    </tbody>
+            </table>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal800 trigger="open-moda800">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="modal800.dismiss()">Cerrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+            <table class="table table-data">
+                <thead>
+                <tr>
+                <th>$800.000</th>
+                </tr>
+                </thead>
+          
+                <tbody>
+                    <tr>
+                    <td>Jhonny Waker Blue La&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" min="1" step="1"[(ngModel)]="jhonnyBL">&nbsp;<button class="btn btn-success" (click)="crearJhonnyL()">Pagar</button>&nbsp;</td>
+                    </tr>
+          
+          
+          
+                    </tbody>
+            </table>
+          
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>

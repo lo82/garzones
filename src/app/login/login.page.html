@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border" *ngIf="isLogged">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed"  (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="main_content_div">
+
+    <div class="upper_div">
+      <img src="assets/images.jpg" class="logo img">
+      <ion-label class="top_lbl">Bienvenidos Meseros</ion-label>
+  <form name="form" [formGroup]="datosForm"  #f="ngForm" novalidate (ngSubmit)="onLogin()">
+      <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombreUsuario" formControlName="nombreUsuario"
+                  autocomplete="off" required></ion-input>
+      <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" formControlName="password"
+                  autocomplete="off" required></ion-input>
+    </form>
+      <div class="fab_div">
+        <ion-fab slot="fixed">
+          <ion-fab-button (click)="click()" [disabled]="!f.valid">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </ion-fab-button>
+          <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">Fail al loguearse: {{ errorMsg }}</div>
+        </ion-fab>
+      </div>
+    </div>
+
+    <div class="lower_div">
+      <ion-label class="bottom_lbl">Las Muñecas De Ramón</ion-label>
+    </div>
+  </div>
+</ion-content>

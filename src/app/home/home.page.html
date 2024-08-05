@@ -1,0 +1,83 @@
+<ion-header *ngIf="roles[0] ==  'ROLE_MESERO'">
+  <div class="header_div" >
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+       <a routerLink="/login"><button (click)="logOut()" style="width:100px;" class="btn btn-danger"><ion-icon name="power-outline"></ion-icon></button></a>
+    </ion-buttons>
+
+    <img src="assets/images.jpg" alt="">
+
+    <div class="btn_div">
+
+      <ion-button size="large" fill="clear" color="danger" [routerLink]="['/bar',id]">
+        <ion-icon name="beer">Bar</ion-icon>
+      </ion-button>
+
+      <ion-button size="small" fill="clear">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+
+    </div>
+
+  </div>
+</ion-header>
+
+<ion-content *ngIf="roles[0] ==  'ROLE_MESERO'">
+  <ion-refresher slot="fixed"  (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <h1>Menú {{name}}</h1>
+  <ion-accordion-group>
+    <ion-accordion value="first" >
+      <ion-item slot="header">
+        <ion-label>Chicas Activas</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list lines="none" >
+  <ion-item  *ngFor="let row of users">
+    <ion-label *ngIf="row.estado === 'activo' " [routerLink]="['/chicas',row.id,row.nombre]" >{{row.nombre}}</ion-label>
+  </ion-item>
+
+</ion-list>
+
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>Tragos Masivos</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <div *ngFor="let row of users" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+
+
+    <div class="btn-group me-1" role="group" aria-label="First group">
+        <table style="width:200px;">
+            <tr *ngIf="row.estado === 'activo'">
+
+
+                  <input class="chk_sel_box chk_all_style" type="checkbox" value="{{row.id}}" (click)="enableDisable()">
+                {{ row.nombre}}
+
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+<br><br><br>
+<button type="button" [disabled]="isDisabled" #myButton  style="aling-items: center;justify-content: center"  class="align-items-center btn btn-danger bg-danger" (click)="veinte()"  >$20.000</button>
+&nbsp;
+<button type="button" [disabled]="isDisabled" style="aling-items: center;justify-content: center" class="align-items-center btn btn-danger bg-danger"  (click)="treinta()" >$30.000</button>
+&nbsp;
+<button type="button" [disabled]="isDisabled" style="aling-items: center;justify-content: center" class="align-items-center btn btn-danger bg-danger"  (click)="cuarenta()" >$40.000</button>
+<br>
+<br>
+</div>
+
+    </ion-accordion>
+
+  </ion-accordion-group>
+</ion-content>

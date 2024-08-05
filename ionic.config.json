@@ -1,0 +1,7 @@
+{
+  "name": "meseroApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
